@@ -1,13 +1,21 @@
 service: hello-aws
-	
+
+frameworkVersion: "3"
+
 useDotenv: true
 
 plugins:
-  - serverless-offline
+  - serverless-offline	
 
 provider:
   name: aws
   runtime: nodejs18.x
+  deploymentMethod: direct
+  region: us-east-1
+  iam:
+    role: arn:aws:iam::673479169827:role/CCThomasHelloAWS
+  deploymentBucket:
+    name: hello-aws-dev-serverlessdeploymentbucket-i5a4jzihuvik
 
 custom:
   serverless-offline:
@@ -15,8 +23,20 @@ custom:
     lambdaPort: 4003
     host: '127.0.0.1'
 
+	
 package:
-  individually: true
+  patterns:
+    - '!.github/**'
+    - '!.vscode/**'
+    - '!coverage/**'
+    - '!docs/**'
+    - '!src/**'
+    - '!Hello AWS.postman_collection.json'
+    - '!jest.config.ts'
+    - '!LICENSE'
+    - '!README.md'
+    - '!serverless.yml'
+    - '!tsconfig.json'
 
 functions:
   helloWorld:
