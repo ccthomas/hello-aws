@@ -13,9 +13,8 @@ export const logger = pino({
  * @returns {APIGatewayProxyResult}
  */
 export const handler = async (event: APIGatewayProxyEvent): Promise<APIGatewayProxyResult> => {
-    console.info('Hello World handler hit.');
-    logger.info('Hello World handler hit from logger.');
-    console.debug('Event', event);
+    logger.info('Hello World handler hit.');
+    logger.debug('Event', event);
 
     return {
         statusCode: 200,
