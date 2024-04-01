@@ -28,6 +28,7 @@ custom:
 
 package:
   individually: true
+  'node_modules/**'
 
 functions:
   helloWorld:
