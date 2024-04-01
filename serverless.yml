@@ -8,6 +8,10 @@ plugins:
 provider:
   name: aws
   runtime: nodejs18.x
+  deploymentMethod: direct
+  region: us-east-1
+  iam:
+    role: arn:aws:iam::673479169827:role/CCThomasHelloAWS
 
 custom:
   serverless-offline:
