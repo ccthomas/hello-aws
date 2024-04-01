@@ -8,7 +8,6 @@ on:
 
 jobs:
   test-unit:
-    needs: install-dependencies
     runs-on: ubuntu-latest
 
     steps:
@@ -26,7 +25,6 @@ jobs:
     - run: npm run test:unit
 
   test-integration:
-    needs: install-dependencies
     runs-on: ubuntu-latest
 
     steps:
