@@ -3,7 +3,9 @@ service: hello-aws
 useDotenv: true
 
 plugins:
-  - serverless-offline
+  - serverless-offline	
+  - serverless-layers
+
 
 provider:
   name: aws
@@ -14,6 +16,9 @@ provider:
     role: arn:aws:iam::673479169827:role/CCThomasHelloAWS
 
 custom:
+  serverless-layers:
+    dependenciesPath: ./package.json
+
   serverless-offline:
     httpPort: 4002
     lambdaPort: 4003
@@ -21,10 +26,6 @@ custom:
 
 package:
   individually: true
-  patterns:
-    - '!node_modules/**'
-    - 'node_modules/pino/**'
-
 
 functions:
   helloWorld:
