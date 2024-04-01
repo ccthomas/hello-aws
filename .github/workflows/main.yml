@@ -1,0 +1,8 @@
+jobs:
+   node-js:
+     uses: .github/workflows/node.js.yml@ref
+
+   deploy:
+     uses: .github/workflows/aws.yml@ref
+     needs:
+       - node-js
