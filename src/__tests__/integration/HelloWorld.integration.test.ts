@@ -14,7 +14,7 @@ describe('Integration Test', () => {
         // verify
 
         expect(response.status).toEqual(200);
-        expect(response.body.message).toEqual('Hello World!!');
+        expect(response.body.message).toEqual('Hello World!!!');
         expect(response.body.timestamp).toBeTruthy();
     });
 });

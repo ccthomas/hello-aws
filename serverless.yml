@@ -1,11 +1,11 @@
 service: hello-aws
-	
+
+frameworkVersion: "3"
+
 useDotenv: true
 
 plugins:
   - serverless-offline	
-  - serverless-layers
-
 
 provider:
   name: aws
@@ -18,23 +18,29 @@ provider:
     name: hello-aws-dev-serverlessdeploymentbucket-i5a4jzihuvik
 
 custom:
-  serverless-layers:
-    dependenciesPath: ./package.json
-
   serverless-offline:
     httpPort: 4002
     lambdaPort: 4003
     host: '127.0.0.1'
 
+	
 package:
-  individually: true
-  'node_modules/**'
+  patterns:
+    - '!.github/**'
+    - '!.vscode/**'
+    - '!coverage/**'
+    - '!docs/**'
+    - '!src/**'
+    - '!Hello AWS.postman_collection.json'
+    - '!jest.config.ts'
+    - '!LICENSE'
+    - '!README.md'
+    - '!serverless.yml'
+    - '!tsconfig.json'
 
 functions:
   helloWorld:
     handler: dist/handlers/HelloWorld.handler
-    package:
-      - 'dist/handlers/HelloWorld.js'
     environment:
       LOG_LEVEL: 'debug'
     events:

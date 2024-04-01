@@ -16,7 +16,7 @@ describe('Hello World Handler', () => {
     expect(typeof result.body).toEqual('string');
 
     const body = JSON.parse(result.body);
-    expect(body.message).toEqual('Hello World!!');
+    expect(body.message).toEqual('Hello World!!!');
     expect(body.timestamp).toBeTruthy();
   });
 });
