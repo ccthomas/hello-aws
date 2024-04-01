@@ -1,7 +1,6 @@
 # Technical Design
 
-- [APIs](#apis)
-- [Environment](#environment)
+- [Sequence Diagrams](#sequence-diagrams)
 - [External Dependencies](#external-dependencies)
 
 ## Sequence Diagrams
