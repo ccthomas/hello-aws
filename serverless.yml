@@ -21,10 +21,16 @@ custom:
 
 package:
   individually: true
+  patterns:
+    - '!node_modules/**'
+    - 'node_modules/pino/**'
+
 
 functions:
   helloWorld:
     handler: dist/handlers/HelloWorld.handler
+    package:
+      - 'dist/handlers/HelloWorld.js'
     environment:
       LOG_LEVEL: 'debug'
     events:
