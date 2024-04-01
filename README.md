@@ -15,6 +15,26 @@ A Postman Collection is provided for hitting service endpoints.
     npm run start
     ```
 
+### Testing
+
+This service supports both unit & integration tests.
+
+#### Integration - Offline
+
+Offline integration tests verify the service runs successfully in a controlled environment.
+
+```bash
+npm run test:integration
+```
+
+#### Unit
+
+Unit tests verify that each individual chunk of code works as expected.
+
+```bash
+npm run test:unit
+```
+
 ## Technical Design
 
 [Technical Design Document](docs/TECHNICAL_DESIGN.md)

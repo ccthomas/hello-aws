@@ -9,7 +9,7 @@
   "scripts": {
     "build": "tsc",
     "start": "npm run build && serverless offline --stage offline",
-    "test:unit": "./node_modules/jest/bin/jest.js --testMatch='**/*.unit.test.ts'",
+    "test:unit": "./node_modules/jest/bin/jest.js --coverage --testMatch='**/*.unit.test.ts'",
     "test:integration": "./node_modules/jest/bin/jest.js --testMatch='**/*.integration.test.ts'"
   },
   "author": "ccthomas",
