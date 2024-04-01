@@ -19,7 +19,7 @@ export const handler = async (event: APIGatewayProxyEvent): Promise<APIGatewayPr
     return {
         statusCode: 200,
         body: JSON.stringify({
-            message: "Hello World!",
+            message: "Hello World!!",
             timestamp: new Date().toISOString(),
         })
     } as APIGatewayProxyResult;
