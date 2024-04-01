@@ -14,6 +14,8 @@ provider:
   region: us-east-1
   iam:
     role: arn:aws:iam::673479169827:role/CCThomasHelloAWS
+  deploymentBucket:
+    name: hello-aws-dev-serverlessdeploymentbucket-i5a4jzihuvik
 
 custom:
   serverless-layers:
